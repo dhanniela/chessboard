@@ -1,0 +1,104 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: url(bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  margin: 0;
+}
+
+.border {
+  display: flex;
+  flex-wrap: wrap;
+  border: 3vw solid #eeeed2;
+  border-radius: 3vw;
+  margin: 8vw;
+}
+.border .board {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1vw solid #769656;
+  height: 40vw;
+  width: 40vw;
+  /* max-width: 40vw; */
+  min-width: 40vw;
+}
+
+.light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vw;
+  width: 5vw;
+  /* max-width: 5vw; */
+  min-width: 5vw;
+  background: #eeeed2;
+}
+
+.green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vw;
+  width: 5vw;
+  /* max-width: 5vw; */
+  min-width: 5vw;
+  background: #769656;
+}
+
+.piece {
+  display: flex;
+  width: 4vw;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.piece img {
+  width: 3vw;
+  max-width: 3vw;
+  min-width: 3vw;
+  height: auto;
+}
+
+#button {
+  max-width: 25vw;
+  width: 25vw;
+  font-family: century gothic;
+  font-size: 2vw;
+  font-weight: bold;
+  background: #eeeed2;
+  border: none;
+  border-radius: 3vw;
+  color: green;
+  cursor: pointer;
+  padding: 1vw 5vw;
+}
+
+#button:focus ~ .border .board .light .piece .move {
+  animation-name: pawnforward;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  position: absolute;
+}
+
+.move {
+  animation-duration: 4s;
+  animation-delay: 1s;
+  position: absolute;
+}
+
+@keyframes pawnforward {
+  0% {
+    top: 59vh;
+  }
+  25% {
+    top: 59vh;
+  }
+  50% {
+    top: 55vh;
+  }
+}/*# sourceMappingURL=style.css.map */
